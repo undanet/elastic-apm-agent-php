@@ -29,6 +29,7 @@ final class Samples extends Collection
     /**
      * @return array
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         $result = [];

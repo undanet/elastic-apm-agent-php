@@ -50,6 +50,7 @@ final class Sample implements \JsonSerializable
     /**
      * @return array
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return [

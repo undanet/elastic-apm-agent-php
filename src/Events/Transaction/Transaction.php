@@ -110,6 +110,7 @@ final class Transaction extends TraceableEvent
     /**
      * @return array
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return [

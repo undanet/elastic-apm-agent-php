@@ -77,6 +77,22 @@ final class ElasticApmTracer
     }
 
     /**
+     * @return TransactionPool
+     */
+    public function transactionPool(): TransactionPool
+    {
+        return $this->transactionPool;
+    }
+
+    /**
+     * @return SpanPool
+     */
+    public function spanPool(): SpanPool
+    {
+        return $this->spanPool;
+    }
+
+    /**
      * @return bool
      */
     public function active()

@@ -59,6 +59,7 @@ final class Container implements \JsonSerializable
     /**
      * @return array|null
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         if (null === $this->id) {

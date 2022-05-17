@@ -20,6 +20,7 @@ abstract class Collection implements \Iterator, \Countable, \JsonSerializable
     /**
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return \current($this->items);
@@ -28,6 +29,7 @@ abstract class Collection implements \Iterator, \Countable, \JsonSerializable
     /**
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function next()
     {
         \next($this->items);
@@ -36,6 +38,7 @@ abstract class Collection implements \Iterator, \Countable, \JsonSerializable
     /**
      * @return int|mixed|string|null
      */
+    #[\ReturnTypeWillChange]
     public function key()
     {
         return \key($this->items);
@@ -44,6 +47,7 @@ abstract class Collection implements \Iterator, \Countable, \JsonSerializable
     /**
      * @return bool
      */
+    #[\ReturnTypeWillChange]
     public function valid()
     {
         return \array_key_exists($this->key(), $this->items);
@@ -52,6 +56,7 @@ abstract class Collection implements \Iterator, \Countable, \JsonSerializable
     /**
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function rewind()
     {
         \reset($this->items);
@@ -60,6 +65,7 @@ abstract class Collection implements \Iterator, \Countable, \JsonSerializable
     /**
      * @return int|void
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return \count($this->items);
@@ -68,6 +74,7 @@ abstract class Collection implements \Iterator, \Countable, \JsonSerializable
     /**
      * @return array
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return $this->items;

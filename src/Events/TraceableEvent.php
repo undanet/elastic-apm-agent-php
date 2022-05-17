@@ -148,6 +148,7 @@ abstract class TraceableEvent extends Event
     /**
      * @return array
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return array_merge(
